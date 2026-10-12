@@ -73,13 +73,7 @@ src/parcial/
     Recursivos.java             peso por municipio, conteo por prioridad (sin ciclos)
     BusquedaBinaria.java        iterativa y recursiva, precondicion: ordenada por codigo
     DivideYVencerasPaquetes.java  paquete de mayor peso
-docs/parcial1/
-  Mapa.md                       fichas de decision por estructura y registro de hallazgos
-  Sustentacion.md               guia de estudio, ejercicios de modificacion y pilas de practica
-  PilaLlamadas_Parcial1.xlsx    pruebas de escritorio y pilas de llamadas (Parte C)
-  ParteA.md                     borrador de la Parte A (el informe final ya la incluye)
-  ParteC.md                     borrador de la Parte C (el informe final ya la incluye)
-  ParteD.md                     borrador de la Parte D (el informe final ya la incluye)
+
 ```
 
 Supuestos:
