@@ -9,6 +9,8 @@ import colecciones.ClaseCollections;
 import colecciones.IteratorSeguro;
 import sets.TipoHashSet;
 import genericos.CarroCompraGenerics;
+import parcial.MainParcial;
+import parcial.PruebasListaEnlazada;
 
 import java.util.Scanner;
 
@@ -52,6 +54,10 @@ public class Main {
 
             System.out.println("\n--- TEMA 4: GENERICOS ---");
             System.out.println(" 11) Carrito generico + iterador propio");
+
+            System.out.println("\n--- PARCIAL 1: QUINDIOEXPRESS ---");
+            System.out.println(" 12) Demo completa del parcial");
+            System.out.println(" 13) Pruebas de la lista enlazada propia");
 
             System.out.println("\n  0) salir");
             System.out.print("\nopcion: ");
@@ -111,6 +117,14 @@ public class Main {
             case 11 -> {
                 encabezado("Carrito generico + iterador propio");
                 CarroCompraGenerics.main(new String[0]);
+            }
+            case 12 -> {
+                encabezado("Parcial 1: QuindioExpress");
+                MainParcial.main(new String[0]);
+            }
+            case 13 -> {
+                encabezado("Pruebas de la lista enlazada propia");
+                PruebasListaEnlazada.main(new String[0]);
             }
             case 0 -> System.out.println("saliendo...");
             default -> System.out.println("opcion invalida");

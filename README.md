@@ -40,6 +40,57 @@ src/
     IteradorCarritoImpares.java      variante: posiciones impares
 ```
 
+## Parcial 1: QuindioExpress
+
+Gestion de operaciones de un centro de distribucion. Todo el codigo vive en
+`src/parcial/` y los borradores del documento PDF en `docs/parcial1/`.
+
+```
+javac -encoding UTF-8 -d out (Get-ChildItem -Recurse -Filter *.java src | ForEach-Object { $_.FullName })
+java -cp out parcial.MainParcial            demo de todos los requisitos
+java -cp out parcial.PruebasListaEnlazada   casos borde de la lista propia
+```
+
+```
+src/parcial/
+  MainParcial.java              demo, una seccion por requisito del enunciado
+  DatosIniciales.java           30 paquetes, 7 municipios, 8 repartidores
+  PruebasListaEnlazada.java     vacia, un elemento, primero, intermedio, ultimo, inexistente
+  modelo/
+    Paquete.java                validaciones; Comparable por codigo (orden natural)
+    Repartidor.java
+  comparadores/
+    ComparadorPrioridad.java    mayor a menor
+    ComparadorPeso.java         mayor a menor
+    ComparadorTiempo.java       menor a mayor
+    ComparadorDespacho.java     prioridad -> tiempo -> codigo
+  estructuras/
+    Coleccion.java              interfaz generica (extiende Iterable)
+    ListaEnlazada.java          lista simple propia + Iterator interno
+  servicio/
+    CentroDistribucion.java     registro, consultas, colas, asignacion, historial
+  algoritmos/
+    Recursivos.java             peso por municipio, conteo por prioridad (sin ciclos)
+    BusquedaBinaria.java        iterativa y recursiva, precondicion: ordenada por codigo
+    DivideYVencerasPaquetes.java  paquete de mayor peso
+docs/parcial1/
+  Mapa.md                       fichas de decision por estructura y registro de hallazgos
+  Sustentacion.md               guia de estudio, ejercicios de modificacion y pilas de practica
+  PilaLlamadas_Parcial1.xlsx    pruebas de escritorio y pilas de llamadas (Parte C)
+  ParteA.md                     borrador de la Parte A (el informe final ya la incluye)
+  ParteC.md                     borrador de la Parte C (el informe final ya la incluye)
+  ParteD.md                     borrador de la Parte D (el informe final ya la incluye)
+```
+
+Supuestos:
+
+- Prioridad de 1 a 5, por defecto 3 (el enunciado dice 0-10 en un lugar y
+  1-5 en las reglas).
+- Un repartidor lleva un paquete a la vez: queda no disponible al asignarlo y
+  vuelve a estar disponible al registrar la entrega.
+- Si no hay repartidor libre para la zona, el paquete despachado queda en una
+  cola de espera.
+
 Un paquete por tema, dos niveles como maximo. Lo que se comparte entre temas
 (`Producto`) va en `modelo`. Lo pendiente son stubs con el enunciado y las
 firmas: no tienen solucion a proposito.
