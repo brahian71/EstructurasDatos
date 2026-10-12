@@ -30,3 +30,7 @@ bin/
 
 ### Mac OS ###
 .DS_Store
+
+### Parcial 1: documentos fuera del repo (informe, evidencias, borradores) ###
+docs/parcial1/
+src/parcial/*.docx
