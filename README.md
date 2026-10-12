@@ -43,7 +43,7 @@ src/
 ## Parcial 1: QuindioExpress
 
 Gestion de operaciones de un centro de distribucion. Todo el codigo vive en
-`src/parcial/` y los borradores del documento PDF en `docs/parcial1/`.
+`src/parcial/`.
 
 ```
 javac -encoding UTF-8 -d out (Get-ChildItem -Recurse -Filter *.java src | ForEach-Object { $_.FullName })
